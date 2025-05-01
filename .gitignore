@@ -3,11 +3,15 @@ pretrain_weights/
 test_weights/
 model_weights/
 data/
-geoseg/models/__pychache__/
-geoseg/models/.ipunb_checkpoints
+# geoseg/models/__pycache__/
+# geoseg/models/.ipunb_checkpoints
 geoseg/models/causal-convld
 geoseg/models/mamba
-geoseg/__pychace__/
-geoseg/datasets/__pychace__/
-geoseg/losses/__pychace__/
-geoseg/
+# geoseg/__pycache__/
+# geoseg/datasets/__pycache__/
+# geoseg/losses/__pycache__/
+# geoseg/datasets/
+# geoseg/losses/
+# geoseg/models/
+# geoseg/__init__.py
+# geoseg/
