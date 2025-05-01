@@ -11,15 +11,15 @@
 
   Lsk-SCS-UNet is a lightweight and high-performance semantic segmentation model designed for high-resolution remote sensing images. It specifically addresses the challenges commonly found in urban remote sensing scenarios, such as significant object scale variation, complex semantic structures, and limited computational resources. The model adopts a hybrid architecture: the encoder leverages the Large Selective Kernel Network (LSKNet), which enables dynamic adjustment of spatial receptive fields, while the decoder employs the SS-Conv-SSM module, combining the local modeling strength of convolution with the long-range dependency modeling capabilities of the Mamba state space model, enabling efficient information integration and representation. To further enhance multi-scale feature interaction, the model incorporates a Multi-scale Feature Integration Module (MFIM), which effectively fuses spatial and channel features from different encoder levels. Experiments on the UAVid dataset demonstrate that Lsk-SCS-UNet outperforms existing state-of-the-art methods in both segmentation accuracy and model efficiency (FLOPs, parameters), making it well-suited for practical remote sensing applications under resource constraints—particularly for the UAVid dataset.
 
-  | Mothods          | mIoU  | Building | Road  | Tree  | LowVeg | MovingCar | StaticCar | Human | Clutter |
-  | ---------------- | ----- | -------- | ----- | ----- | ------ | --------- | --------- | ----- | ------- |
-  | DCSwin[48]       | 57.38 | 83.24    | 67.93 | 68.68 | 59.74  | 59.21     | 45.28     | 27.34 | 47.60   |
-  | A2FNP[49]        | 61.65 | 84.79    | 69.35 | 67.50 | 61.14  | 66.64     | 55.93     | 37.10 | 50.75   |
-  | BANet[50]        | 67.06 | 88.18    | 73.61 | 75.03 | 65.30  | 69.75     | 62.13     | 45.84 | 56.68   |
-  | FTUNetFormer[45] | 63.60 | 85.88    | 72.60 | 72.21 | 63.87  | 66.92     | 55.76     | 37.75 | 54.10   |
-  | ABCNet[51]       | 64.38 | 87.19    | 72.25 | 72.96 | 63.62  | 67.45     | 58.91     | 38.79 | 53.88   |
-  | UNetFormer[45]   | 65.58 | 86.71    | 74.87 | 74.32 | 65.60  | 69.02     | 59.20     | 38.37 | 56.53   |
-  | LSK-SCS-UNet     | 67.46 | 88.57    | 76.99 | 75.21 | 65.57  | 70.90     | 62.02     | 41.06 | 59.31   |
+  | Methods       | backbone   | mIOU  | mF1   | OA    |
+  | ------------- | ---------- | ----- | ----- | ----- |
+  | DCSwin[48]     | Swin-Tiny  | 57.38 | 71.48 | 80.59 |
+  | A2FPN[49]      | ResNet18   | 61.65 | 75.31 | 82.02 |
+  | BANet[50]      | ResT-Lite  | 67.06 | 79.66 | 84.95 |
+  | FTUNetFormer[45] | Swin-Base | 63.60 | 76.87 | 83.39 |
+  | ABCNet[51]     | ResNet18   | 64.38 | 77.47 | 83.85 |
+  | UNetFormer[45] | ResNet18   | 65.58 | 78.34 | 84.55 |
+  | LSK-SCS-UNet   | LSKNet     | 67.46 | 89.77 | 85.69 |
 
   ## Install
 
