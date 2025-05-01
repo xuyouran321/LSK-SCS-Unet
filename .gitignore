@@ -1,0 +1,13 @@
+*.ckpt
+pretrain_weights/
+test_weights/
+model_weights/
+data/
+geoseg/models/__pychache__/
+geoseg/models/.ipunb_checkpoints
+geoseg/models/causal-convld
+geoseg/models/mamba
+geoseg/__pychace__/
+geoseg/datasets/__pychace__/
+geoseg/losses/__pychace__/
+geoseg/
