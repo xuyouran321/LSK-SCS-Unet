@@ -28,10 +28,15 @@ def seed_everything(seed):
 def get_args():
     parser = argparse.ArgumentParser()
     arg = parser.add_argument
-    arg("-c", "--config_path", type=Path, help="Path to the config.", default="config/uavid/lsk_convssm_camtest.py")
+    arg("-c", "--config_path", type=Path, help="Path to the config.", default="config/uavid/lsk_convssm_test.py")
     return parser.parse_args()
 
-# 全监督训练函数，传入参数为pytorch_lightning中的轻量模型
+# 全监督训练函数，传入参数为pytorch_lightning中的轻量模型# The `__name__ == "__main__"` condition in Python ensures that
+# the code inside it will only run if the script is executed
+# directly, and not if it is imported as a module in another
+# script. This is a common practice in Python to prevent certain
+# code from running when the script is imported as a module.
+
 class Supervision_Train(pl.LightningModule):
     # 设置一些模型的基本属性，配置参数、net模型、loss函数、训练和验证的方法
     def __init__(self, config):
@@ -41,7 +46,7 @@ class Supervision_Train(pl.LightningModule):
 
         self.loss = config.loss
 
-        self.metrics_train = Evaluator(num_class=config.num_classes)
+        self.metrics_train = Evaluator(num_class=config.num_classes)#计算评估指标
         self.metrics_val = Evaluator(num_class=config.num_classes)
 
     # 正向传播
@@ -163,7 +168,7 @@ class Supervision_Train(pl.LightningModule):
 
     # 在类中添加一个方法用于将内容写入txt文档
     def write_to_txt(self, content):
-        with open('lsk_convSSMcam.txt', 'a') as f:
+        with open('manet.txt', 'a') as f:
             f.write(content + '\n')
 
     def configure_optimizers(self):
@@ -188,7 +193,7 @@ def main():
     config = py2cfg(args.config_path)
     seed_everything(42)
     
-    # 测试加载的模型
+    # 保存模型到lighting
     checkpoint_callback = ModelCheckpoint(save_top_k=config.save_top_k, monitor=config.monitor,
                                           save_last=config.save_last, mode=config.monitor_mode,
                                           dirpath=config.weights_path,
@@ -197,7 +202,7 @@ def main():
     
     # 实例化模型
     model = Supervision_Train(config)
-    # 是否要进行预训练
+    # 预训练
     if config.pretrained_ckpt_path:
         model = Supervision_Train.load_from_checkpoint(config.pretrained_ckpt_path, config=config)
 
