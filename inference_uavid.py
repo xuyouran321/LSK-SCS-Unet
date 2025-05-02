@@ -75,7 +75,7 @@ def get_args():
     arg = parser.add_argument
     arg("-i", "--image_path", type=str, default='data/uavid/test/images', help="Path to  huge image")
     arg("-c", "--config_path", type=Path, help="Path to  config", default="config/uavid/lsk_convssm_test.py")###############################
-    arg("-o", "--output_path", type=Path, help="Path to save resulting masks.", default="output_img/new_test/convSSM/patch")#########################
+    arg("-o", "--output_path", type=Path, help="Path to save resulting masks.", default="output_img/new_test/lsk_convssm/patch")#########################
     arg("-t", "--tta", help="Test time augmentation.", default="lr", choices=[None, "d4", "lr"])
     arg("-ph", "--patch-height", help="height of patch size", type=int, default=1024)
     arg("-pw", "--patch-width", help="width of patch size", type=int, default=1024)
@@ -158,7 +158,7 @@ def main():
     # 把训练好的模型加载进来
     # model = Supervision_Train.load_from_checkpoint(os.path.join(config.weights_path, config.test_weights_name+'.ckpt'), config=config)
     # model = Supervision_Train.load_from_checkpoint('test_weights/lsk_convssm.ckpt',config=config)##################################
-    model = Supervision_Train.load_from_checkpoint('model_weights/uavid/lsk_convssm/last-v1.ckpt',config=config)##################################
+    model = Supervision_Train.load_from_checkpoint('model_weights/uavid/lsk_convssm/last-v3.ckpt',config=config)##################################
 
     # 设置训练设备
     # model.cuda(config.gpus)
