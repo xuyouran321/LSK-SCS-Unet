@@ -19,7 +19,7 @@ backbone_weight_decay = weight_decay
 num_classes = len(CLASSES)
 classes = CLASSES
 
-weights_name = "A2FPN-1024-1024crop"
+weights_name = "A2FPN-1024-1024crop_xu"
 weights_path = "model_weights/uavid/{}".format(weights_name)
 test_weights_name = "last"
 log_name = 'uavid/{}'.format(weights_name)
