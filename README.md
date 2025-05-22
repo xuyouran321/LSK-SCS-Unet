@@ -13,13 +13,13 @@
 
   | Methods       | backbone   | mIOU  | mF1   | OA    |
   | ------------- | ---------- | ----- | ----- | ----- |
-  | DCSwin[48]     | Swin-Tiny  | 57.38 | 71.48 | 80.59 |
-  | A2FPN[49]      | ResNet18   | 61.65 | 75.31 | 82.02 |
-  | BANet[50]      | ResT-Lite  | 67.06 | 79.66 | 84.95 |
-  | FTUNetFormer[45] | Swin-Base | 63.60 | 76.87 | 83.39 |
-  | ABCNet[51]     | ResNet18   | 64.38 | 77.47 | 83.85 |
-  | UNetFormer[45] | ResNet18   | 65.58 | 78.34 | 84.55 |
-  | LSK-SCS-UNet   | LSKNet     | 67.46 | 89.77 | 85.69 |
+  | DCSwin[34]     | Swin-Tiny  | 57.38 | 71.48 | 80.59 |
+  | A2FPN[32]      | ResNet18   | 61.65 | 75.31 | 82.02 |
+  | BANet[36]      | ResT-Lite  | 50.98 | 65.97 | 77.22 |
+  | FTUNetFormer[35] | Swin-Base | 63.60 | 76.87 | 83.39 |
+  | ABCNet[33]     | ResNet18   | 64.38 | 77.47 | 83.85 |
+  | UNetFormer[7] | ResNet18   | 65.97 | 78.74 | 84.61 |
+  | LSK-SCS-UNet   | LSKNet     | 68.21 | 80.21 | 86.00 |
 
   ## Install
 
