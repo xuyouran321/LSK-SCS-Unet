@@ -2,7 +2,7 @@
 from torch.utils.data import DataLoader
 from geoseg.losses import *
 from geoseg.datasets.uavid_dataset import *
-from geoseg.models.lsk_convssm_cam import lsk_convssm
+from geoseg.models.ablation_network.lsk_convssm_cam import lsk_convssm
 from catalyst.contrib.nn import Lookahead
 from catalyst import utils
 
