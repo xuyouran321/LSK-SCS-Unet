@@ -19,7 +19,7 @@
   | FTUNetFormer[35] | Swin-Base | 63.60 | 76.87 | 83.39 |
   | ABCNet[33]     | ResNet18   | 64.38 | 77.47 | 83.85 |
   | UNetFormer[7] | ResNet18   | 65.97 | 78.74 | 84.61 |
-  | LSK-SCS-UNet   | LSKNet     | 68.21 | 80.21 | 86.00 |
+  | LSK-SCS-UNet   | LSKNet     | 68.00 | 80.21 | 86.00 |
 
   ## Install
 
